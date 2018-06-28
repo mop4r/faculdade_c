@@ -20,7 +20,6 @@ struct disciplina {
 	char nomeprofessor[20];
 	int cargahoraria;
 	char horariosemanal[50];
-	int horariograde[3][4];
 };
 
 void print_matriz(int gradehoraria[BLOCOS][DIAS]){
