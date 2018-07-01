@@ -245,6 +245,7 @@ int main(){
 						goto cadr;
 					}
 					cadrmat:
+					if(i<2){
 					printf("\n Deseja cadastrar mais materias? (s/n): ");
 					scanf("%s",&resp1);
 					if(resp1=='n'){
@@ -254,6 +255,7 @@ int main(){
 					if(resp1!='n'&&resp1!='s'){
 						printf("\n Opcao Invalida!\n");
 						goto cadrmat;
+					}
 					}
 					system("cls");
 				}
@@ -342,7 +344,7 @@ int main(){
 				name:
 				printf("\n Digite o nome do aluno, ou parte dele: ");
 				fflush(stdin);
-				gets(nome2);
+				fgets(nome2,30,stdin);
 				for(j=0; j<=c; j++){
 					t = strstr(aluno[j].nome,nome2);
 					if (t!=NULL){
@@ -374,8 +376,7 @@ int main(){
 			
 			if(escolha==5){	
 				system("cls");
-				printf("\n\n O Programa foi fechado");
-				getch(); 
+				printf("\n\n O Programa foi fechado"); 
 			}
 		}
 	}
